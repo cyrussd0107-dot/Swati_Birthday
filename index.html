@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Birthday Countdown ✨</title>
+
+    <link rel="stylesheet" href="page17.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <button class="music-btn" id="musicBtn">
+    ♫ ambience
+</button>
+
+    <!-- BACKGROUND VIDEO -->
+
+    <video class="bg-video" autoplay muted loop playsinline webkit-playsinline>
+        <source src="count.mp4" type="video/mp4">
+    </video>
+
+    <!-- OVERLAY -->
+
+    <div class="overlay"></div>
+    <div class="vignette"></div>
+
+    <!-- MUSIC -->
+
+    <audio id="music" autoplay loop>
+        <source src="countd.mp3" type="audio/mp3">
+    </audio>
+
+    <!-- PARTICLES -->
+
+    <div class="particles"></div>
+
+    <!-- MAIN -->
+
+    <main class="container">
+
+        <div class="top-text">
+            birthday countdown ✦
+        </div>
+
+        <h1 class="title">
+            Some birthdays<br>
+            deserve magic
+        </h1>
+
+        <p class="subtitle">
+            so i made one for you.
+        </p>
+
+        <!-- TIMER -->
+
+        <div class="timer" id="timer">
+            03 : 00
+        </div>
+
+        <!-- PROGRESS -->
+
+        <div class="progress-bar">
+            <div class="progress" id="progress"></div>
+        </div>
+
+    </main>
+
+    <!-- FIREWORK SCREEN -->
+
+    <section class="firework-screen" id="fireworkScreen">
+
+        <div class="rocket"></div>
+
+        <div class="boom"></div>
+
+        <img src="bg.jpeg" class="special-photo">
+
+        <h2 class="special-text">
+            that one special person<br>
+            born in july.
+        </h2>
+
+    </section>
+
+    <script src="page17.js"></script>
+
+</body>
+
+</html>
