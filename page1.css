@@ -1,0 +1,408 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:'Poppins',sans-serif;
+    height:100vh;
+    overflow:hidden;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    position:relative;
+    color:white;
+}
+
+/* BACKGROUND IMAGE */
+
+.bg-image{
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+
+    background: 
+    linear-gradient(
+        rgba(0,0,0,0.45),
+        rgba(0,0,0,0.45)
+    ),
+    url('bg.jpeg');
+
+    background-size: cover;
+    background-position: center;
+
+    filter: blur(8px);
+    transform: scale(1.1);
+
+    z-index: -3;
+}
+
+/* DARK OVERLAY */
+
+.overlay{
+    position:absolute;
+    width:100%;
+    height:100%;
+
+    background:
+    linear-gradient(
+        135deg,
+        rgba(255,182,193,0.18),
+        rgba(255,105,180,0.15)
+    );
+
+    z-index:-2;
+}
+
+/* FLOATING EMOJIS */
+
+.floating{
+    position:absolute;
+    font-size:28px;
+    animation:float 6s infinite ease-in-out;
+    opacity:0.8;
+}
+
+.floating1{
+    top:8%;
+    left:8%;
+}
+
+.floating2{
+    top:18%;
+    right:10%;
+    animation-delay:1s;
+}
+
+.floating3{
+    bottom:15%;
+    left:12%;
+    animation-delay:2s;
+}
+
+.floating4{
+    bottom:12%;
+    right:14%;
+    animation-delay:3s;
+}
+
+.floating5{
+    top:45%;
+    right:5%;
+    animation-delay:4s;
+}
+
+/* MAIN CONTAINER */
+
+.main-container{
+    width:90%;
+    max-width:1350px;
+    height:85vh;
+
+    background:rgba(255,255,255,0.08);
+
+    border:1px solid rgba(255,255,255,0.18);
+
+    backdrop-filter:blur(18px);
+    -webkit-backdrop-filter:blur(18px);
+
+    border-radius:40px;
+
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+
+    padding:60px;
+
+    box-shadow:
+    0 15px 60px rgba(0,0,0,0.35);
+
+    overflow:hidden;
+    position: relative;
+    z-index: 5;
+}
+
+/* LEFT SIDE */
+
+.left-section{
+    width:52%;
+}
+
+/* PROFILE IMAGE */
+
+.profile-section{
+    margin-bottom:25px;
+}
+
+.profile-section img{
+    width:110px;
+    height:110px;
+
+    border-radius:50%;
+
+    object-fit:cover;
+
+    border:4px solid rgba(255,255,255,0.3);
+
+    box-shadow:
+    0 0 30px rgba(255,105,180,0.4);
+
+    animation:float 4s infinite ease-in-out;
+}
+
+/* MAIN TITLE */
+
+.main-title{
+    font-size:82px;
+    font-weight:800;
+    line-height:1.05;
+
+    margin-bottom:25px;
+
+    color:white;
+
+    text-shadow:
+    0 0 30px rgba(255,255,255,0.25);
+}
+
+/* SUBTITLE */
+
+.subtitle{
+    font-size:22px;
+    line-height:1.9;
+
+    color:#fff5fa;
+
+    max-width:700px;
+
+    margin-bottom:35px;
+}
+
+/* SMALL TEXT */
+
+.cute-lines{
+    margin-bottom:40px;
+}
+
+.cute-lines p{
+    margin-bottom:14px;
+
+    font-size:18px;
+
+    color:#ffe5f1;
+}
+
+/* BUTTON */
+
+.journey-btn{
+    padding:20px 48px;
+
+    border:none;
+    border-radius:50px;
+
+    font-size:18px;
+    font-weight:600;
+
+    cursor:pointer;
+
+    color:white;
+
+    background:
+    linear-gradient(
+        135deg,
+        #ff4fa0,
+        #ff7bbb
+    );
+
+    box-shadow:
+    0 10px 30px rgba(255,105,180,0.45);
+
+    transition:0.35s;
+}
+
+.journey-btn:hover{
+    transform:translateY(-5px) scale(1.04);
+
+    box-shadow:
+    0 15px 40px rgba(255,105,180,0.65);
+}
+
+/* RIGHT SIDE */
+
+.right-section{
+    width:40%;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+/* IMAGE FRAME */
+
+.image-frame{
+    width:380px;
+    height:500px;
+
+    border-radius:35px;
+
+    overflow:hidden;
+
+    border:4px solid rgba(255,255,255,0.2);
+
+    box-shadow:
+    0 15px 60px rgba(0,0,0,0.45),
+    0 0 30px rgba(255,105,180,0.25);
+
+    animation:float 5s infinite ease-in-out;
+}
+
+.image-frame img{
+    width:100%;
+    height:100%;
+
+    object-fit:cover;
+}
+
+/* FLOAT ANIMATION */
+
+@keyframes float{
+
+    0%{
+        transform:translateY(0px);
+    }
+
+    50%{
+        transform:translateY(-15px);
+    }
+
+    100%{
+        transform:translateY(0px);
+    }
+}
+
+/* MOBILE */
+
+@media(max-width:1000px){
+
+    body{
+        overflow:auto;
+        padding:30px 0;
+    }
+
+    .main-container{
+        flex-direction:column;
+        height:auto;
+
+        padding:40px 25px;
+
+        text-align:center;
+    }
+
+    .left-section,
+    .right-section{
+        width:100%;
+    }
+
+    .main-title{
+        font-size:58px;
+    }
+
+    .subtitle{
+        font-size:18px;
+        margin:auto auto 30px;
+    }
+
+    .cute-lines{
+        margin-top:20px;
+    }
+
+    .image-frame{
+        width:300px;
+        height:400px;
+
+        margin-top:40px;
+    }
+}
+
+@media(max-width:600px){
+
+    .main-title{
+        font-size:42px;
+    }
+
+    .subtitle{
+        font-size:16px;
+    }
+
+    .cute-lines p{
+        font-size:15px;
+    }
+
+    .image-frame{
+        width:240px;
+        height:320px;
+    }
+
+    .journey-btn{
+        width:100%;
+    }
+}
+
+/* =========================
+   FLOATING HEARTS
+========================= */
+
+.heart{
+
+    position: fixed;
+
+    pointer-events: none;
+
+    animation: floatUp linear forwards;
+
+    filter: blur(0.3px);
+
+}
+
+
+
+/* FLOATING ANIMATION */
+
+@keyframes floatUp{
+
+    0%{
+
+        transform:
+        translateY(0px)
+        rotate(0deg);
+
+        opacity: 0;
+
+    }
+
+    10%{
+
+        opacity: 0.2;
+
+    }
+
+    50%{
+
+        opacity: 0.3;
+
+    }
+
+    100%{
+
+        transform:
+        translateY(-120vh)
+        rotate(360deg);
+
+        opacity: 0;
+
+    }
+}

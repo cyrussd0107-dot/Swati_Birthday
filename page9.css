@@ -1,0 +1,582 @@
+/* =========================
+   RESET
+========================= */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:'Inter',sans-serif;
+    overflow:hidden;
+    background:#fff5f8;
+    color:#1f1f1f;
+}
+
+/* =========================
+   BACKGROUND IMAGE
+========================= */
+
+.bg-image{
+
+    position:fixed;
+    inset:0;
+
+    background:
+    url("bg.jpeg")
+    center center/cover no-repeat;
+
+    filter:
+    blur(4px)
+    brightness(.92);
+
+    transform:scale(1.06);
+
+    animation:
+    bgZoom 18s ease-in-out infinite alternate;
+
+    z-index:-3;
+}
+
+@keyframes bgZoom{
+
+    from{
+        transform:scale(1.06);
+    }
+
+    to{
+        transform:scale(1.12);
+    }
+}
+
+/* =========================
+   OVERLAY
+========================= */
+
+.bg-overlay{
+
+    position:fixed;
+    inset:0;
+
+    background:
+    linear-gradient(
+    90deg,
+
+    rgba(255,240,245,.65),
+
+    rgba(255,228,236,.45),
+
+    rgba(255,240,245,.65)
+    );
+
+    z-index:-2;
+}
+
+/* =========================
+   MAIN LAYOUT
+========================= */
+
+.music-page{
+
+    width:100%;
+    min-height:100vh;
+
+    display:grid;
+
+    grid-template-columns:
+    1fr
+    .9fr
+    1.1fr;
+
+    align-items:center;
+
+    gap:55px;
+
+    padding:
+    60px
+    70px;
+}
+
+/* =========================
+   LEFT SECTION
+========================= */
+
+.left-section{
+
+    max-width:460px;
+}
+
+.mini-tag{
+
+    font-size:13px;
+
+    letter-spacing:7px;
+
+    text-transform:uppercase;
+
+    color:#c06f96;
+
+    margin-bottom:30px;
+}
+
+.main-title{
+
+    font-size:
+    clamp(4rem, 8vw, 8rem);
+
+    line-height:.9;
+
+    font-weight:800;
+
+    color:#2f1f28;
+
+    margin-bottom:30px;
+}
+
+.description{
+
+    max-width:420px;
+
+    line-height:1.9;
+
+    font-size:1.1rem;
+
+    color:#6f5b64;
+}
+
+/* =========================
+   CENTER
+========================= */
+
+.center-section{
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+.portrait-wrap{
+
+    width:100%;
+    max-width:400px;
+
+    aspect-ratio:3/4;
+
+    border-radius:35px;
+
+    overflow:hidden;
+
+    box-shadow:
+    0 30px 60px rgba(0,0,0,.12);
+}
+
+.portrait{
+
+    width:100%;
+    height:100%;
+
+    object-fit:cover;
+
+    animation:
+    portraitFloat 7s ease-in-out infinite;
+}
+
+@keyframes portraitFloat{
+
+    0%{
+        transform:scale(1.03) translateY(0px);
+    }
+
+    50%{
+        transform:scale(1.06) translateY(-10px);
+    }
+
+    100%{
+        transform:scale(1.03) translateY(0px);
+    }
+}
+
+/* =========================
+   RIGHT SECTION
+========================= */
+
+.right-section{
+
+    display:flex;
+    flex-direction:column;
+
+    gap:20px;
+
+    padding-bottom:120px;
+}
+
+/* =========================
+   SONG CARD
+========================= */
+
+.song-card{
+
+    background:
+    rgba(255,245,248,.82);
+
+    border-radius:26px;
+
+    padding:18px;
+
+    display:grid;
+
+    grid-template-columns:
+    78px
+    1fr
+    70px
+    58px;
+
+    gap:18px;
+
+    align-items:center;
+
+    border:
+    1px solid rgba(255,255,255,.7);
+
+    box-shadow:
+    0 12px 30px rgba(0,0,0,.05);
+
+    transition:.4s ease;
+
+    cursor:pointer;
+}
+
+.song-card:hover{
+
+    transform:translateY(-5px);
+
+    box-shadow:
+    0 18px 40px rgba(0,0,0,.08);
+}
+
+.active-song{
+
+    border:
+    1px solid #eba9c2;
+
+    box-shadow:
+    0 20px 40px rgba(235,169,194,.18);
+}
+
+/* =========================
+   COVER
+========================= */
+
+.cover-wrap{
+
+    width:78px;
+    height:78px;
+
+    border-radius:18px;
+
+    overflow:hidden;
+}
+
+.cover{
+
+    width:100%;
+    height:100%;
+
+    object-fit:cover;
+}
+
+.active-song .cover{
+
+    animation:
+    rotateCover 8s linear infinite;
+}
+
+@keyframes rotateCover{
+
+    from{
+        transform:rotate(0deg);
+    }
+
+    to{
+        transform:rotate(360deg);
+    }
+}
+
+/* =========================
+   SONG INFO
+========================= */
+
+.song-info h3{
+
+    font-size:1.45rem;
+
+    margin-bottom:5px;
+
+    color:#33242c;
+}
+
+.song-info p{
+
+    color:#866f78;
+
+    font-size:.95rem;
+}
+
+/* =========================
+   WAVEFORM
+========================= */
+
+.wave{
+
+    display:flex;
+    align-items:flex-end;
+
+    gap:4px;
+
+    height:34px;
+}
+
+.wave span{
+
+    width:5px;
+
+    background:#de93b1;
+
+    border-radius:30px;
+
+    height:10px;
+}
+
+.active-song .wave span{
+
+    animation:
+    waveAnim .9s infinite ease-in-out;
+}
+
+.active-song .wave span:nth-child(2){
+
+    animation-delay:.15s;
+}
+
+.active-song .wave span:nth-child(3){
+
+    animation-delay:.3s;
+}
+
+.active-song .wave span:nth-child(4){
+
+    animation-delay:.45s;
+}
+
+@keyframes waveAnim{
+
+    0%{
+        height:10px;
+    }
+
+    50%{
+        height:32px;
+    }
+
+    100%{
+        height:10px;
+    }
+}
+
+/* =========================
+   PLAY BUTTON
+========================= */
+
+.play-btn{
+
+    width:54px;
+    height:54px;
+
+    border:none;
+
+    border-radius:50%;
+
+    background:#e4a7c1;
+
+    color:white;
+
+    font-size:1rem;
+
+    cursor:pointer;
+
+    transition:.3s;
+}
+
+.play-btn:hover{
+
+    transform:scale(1.08);
+}
+
+/* =========================
+   LYRICS BOX
+========================= */
+
+.lyrics-box{
+
+    margin-top:5px;
+
+    background:
+    rgba(255,245,248,.78);
+
+    border-radius:26px;
+
+    padding:32px;
+
+    min-height:120px;
+
+    display:flex;
+    align-items:center;
+
+    box-shadow:
+    0 12px 30px rgba(0,0,0,.05);
+}
+
+.lyrics-box p{
+
+    font-family:
+    'Cormorant Garamond',
+    serif;
+
+    font-size:2rem;
+
+    line-height:1.5;
+
+    color:#694f5b;
+}
+
+/* =========================
+   NEXT BUTTON
+========================= */
+
+.next-page-btn{
+
+    position:fixed;
+
+    right:35px;
+    bottom:30px;
+
+    z-index:9999;
+
+    display:flex;
+    align-items:center;
+    gap:12px;
+
+    text-decoration:none;
+
+    background:#d685aa;
+
+    color:white;
+
+    padding:
+    18px 34px;
+
+    border-radius:60px;
+
+    font-size:15px;
+    font-weight:600;
+
+    letter-spacing:1px;
+
+    box-shadow:
+    0 12px 30px rgba(214,133,170,.28);
+
+    transition:.35s ease;
+}
+
+.next-page-btn:hover{
+
+    transform:
+    translateY(-4px);
+
+    background:#c86f98;
+}
+
+.next-page-btn span{
+
+    font-size:18px;
+
+    transition:.3s;
+}
+
+.next-page-btn:hover span{
+
+    transform:
+    translateX(4px);
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media(max-width:1200px){
+
+    body{
+        overflow-y:auto;
+    }
+
+    .music-page{
+
+        grid-template-columns:1fr;
+
+        gap:45px;
+
+        padding:
+        50px
+        30px
+        140px;
+    }
+
+    .left-section{
+
+        max-width:100%;
+    }
+
+    .description{
+
+        max-width:100%;
+    }
+
+    .portrait-wrap{
+
+        max-width:320px;
+    }
+}
+
+@media(max-width:700px){
+
+    .song-card{
+
+        grid-template-columns:
+        70px
+        1fr;
+
+        gap:16px;
+    }
+
+    .wave,
+    .play-btn{
+
+        margin-top:10px;
+    }
+
+    .lyrics-box p{
+
+        font-size:1.5rem;
+    }
+
+    .next-page-btn{
+
+        right:20px;
+        bottom:20px;
+
+        padding:
+        16px 24px;
+    }
+}

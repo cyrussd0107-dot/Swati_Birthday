@@ -1,0 +1,531 @@
+/* =========================
+   RESET
+========================= */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+
+    width:100%;
+    height:100vh;
+
+    overflow:hidden;
+
+    position:relative;
+
+    font-family:'Poppins',sans-serif;
+
+    background:
+    linear-gradient(
+    135deg,
+    #ffe8f0 0%,
+    #fff6fa 30%,
+    #efe7ff 65%,
+    #fff3f7 100%
+    );
+}
+
+/* =========================
+   DREAM SPACE
+========================= */
+
+.dream-space{
+
+    position:relative;
+
+    width:100%;
+    height:100vh;
+
+    overflow:hidden;
+}
+
+/* =========================
+   BACKGROUND
+========================= */
+
+.bg-image{
+
+    position:absolute;
+    inset:0;
+
+    background:url("../images/bg.jpg")
+    center/cover no-repeat;
+
+    opacity:.10;
+
+    filter:
+    blur(40px);
+
+    transform:scale(1.2);
+}
+
+.gradient-overlay{
+
+    position:absolute;
+    inset:0;
+
+    background:
+
+    radial-gradient(circle at top left,
+    rgba(255,210,225,.65),
+    transparent 35%),
+
+    radial-gradient(circle at bottom right,
+    rgba(226,215,255,.7),
+    transparent 35%),
+
+    radial-gradient(circle at center,
+    rgba(255,240,224,.55),
+    transparent 40%);
+}
+
+/* =========================
+   GRAIN
+========================= */
+
+.grain{
+
+    position:absolute;
+    inset:0;
+
+    opacity:.04;
+
+    background-image:
+    url("https://www.transparenttextures.com/patterns/noise.png");
+}
+
+/* =========================
+   LIGHTS
+========================= */
+
+.light{
+
+    position:absolute;
+
+    border-radius:50%;
+
+    filter:blur(120px);
+
+    animation:floatLight 10s ease-in-out infinite;
+}
+
+.light1{
+
+    width:350px;
+    height:350px;
+
+    background:#ffd6ea;
+
+    top:-100px;
+    left:-80px;
+}
+
+.light2{
+
+    width:300px;
+    height:300px;
+
+    background:#eadcff;
+
+    right:-80px;
+    bottom:-100px;
+}
+
+.light3{
+
+    width:250px;
+    height:250px;
+
+    background:#ffe8d9;
+
+    top:35%;
+    left:48%;
+}
+
+@keyframes floatLight{
+
+    0%{
+        transform:translateY(0px);
+    }
+
+    50%{
+        transform:translateY(35px);
+    }
+
+    100%{
+        transform:translateY(0px);
+    }
+}
+
+/* =========================
+   HERO TEXT
+========================= */
+
+.hero-text{
+
+    position:absolute;
+
+    left:9%;
+    top:50%;
+
+    transform:translateY(-50%);
+
+    width:42%;
+
+    z-index:10;
+}
+
+.small-tag{
+
+    font-size:13px;
+
+    letter-spacing:10px;
+
+    text-transform:uppercase;
+
+    color:#ca8da3;
+
+    margin-bottom:25px;
+}
+
+.hero-text h1{
+
+    font-size:7rem;
+
+    line-height:.85;
+
+    font-weight:900;
+
+    color:#fff;
+
+    text-shadow:
+    0 0 20px rgba(255,255,255,.6);
+
+    letter-spacing:-5px;
+}
+
+.hero-para{
+
+    margin-top:40px;
+
+    max-width:580px;
+
+    font-size:1.35rem;
+
+    line-height:2;
+
+    color:#705f69;
+}
+
+/* =========================
+   FLOATING OBJECTS
+========================= */
+
+.memory-object{
+
+    position:absolute;
+
+    width:105px;
+    height:105px;
+
+    border-radius:50%;
+
+    background:
+    rgba(255,255,255,.40);
+
+    backdrop-filter:blur(15px);
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    font-size:2.9rem;
+
+    cursor:pointer;
+
+    z-index:20;
+
+    transition:.4s ease;
+
+    box-shadow:
+    0 10px 35px rgba(255,182,193,.18);
+
+    animation:floating 6s ease-in-out infinite;
+}
+
+.memory-object:hover{
+
+    transform:
+    scale(1.12);
+
+    box-shadow:
+    0 0 40px rgba(255,182,193,.45);
+}
+
+@keyframes floating{
+
+    0%{
+        transform:translateY(0px);
+    }
+
+    50%{
+        transform:translateY(-18px);
+    }
+
+    100%{
+        transform:translateY(0px);
+    }
+}
+
+/* =========================
+   POSITIONS
+========================= */
+
+.moon{
+
+    top:4%;
+    left:2%;
+}
+
+.ribbon{
+
+    top:18%;
+    left:2%;
+}
+
+.rain{
+
+    top:48%;
+    left:5%;
+}
+
+.ticket{
+
+    top:67%;
+    left:3%;
+}
+
+.music{
+
+    bottom:7%;
+    left:6%;
+}
+
+.camera{
+
+    top:10%;
+    right:14%;
+}
+
+.tea{
+
+    top:48%;
+    right:18%;
+}
+
+/* =========================
+   POPUP
+========================= */
+
+.memory-popup{
+
+    position:absolute;
+
+    right:7%;
+    bottom:14%;
+
+    width:520px;
+
+    min-height:180px;
+
+    padding:45px;
+
+    border-radius:35px;
+
+    background:
+    rgba(255,255,255,.48);
+
+    backdrop-filter:blur(18px);
+
+    box-shadow:
+    0 20px 50px rgba(255,182,193,.18);
+
+    z-index:30;
+
+    opacity:0;
+
+    transform:
+    translateY(50px);
+
+    transition:.7s ease;
+}
+
+.memory-popup.active{
+
+    opacity:1;
+
+    transform:
+    translateY(0px);
+}
+
+.popup-text{
+
+    font-size:2rem;
+
+    line-height:1.7;
+
+    color:#8f6a7d;
+
+    text-align:center;
+
+    font-family:'Cormorant Garamond',serif;
+}
+
+/* =========================
+   BUTTON
+========================= */
+
+.next-btn{
+
+    position:absolute;
+
+    right:7%;
+    bottom:5%;
+
+    text-decoration:none;
+
+    background:#ffffff;
+
+    color:#a45d82;
+
+    padding:18px 42px;
+
+    border-radius:60px;
+
+    font-weight:600;
+
+    transition:.4s ease;
+
+    z-index:50;
+
+    box-shadow:
+    0 10px 30px rgba(255,182,193,.3);
+}
+
+.next-btn:hover{
+
+    transform:
+    translateY(-5px)
+    scale(1.04);
+}
+
+/* =========================
+   PARTICLES
+========================= */
+
+.particles span{
+
+    position:absolute;
+
+    width:5px;
+    height:5px;
+
+    border-radius:50%;
+
+    background:white;
+
+    opacity:.5;
+
+    animation:particleMove linear infinite;
+}
+
+@keyframes particleMove{
+
+    from{
+        transform:translateY(100vh);
+    }
+
+    to{
+        transform:translateY(-120vh);
+    }
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media(max-width:1200px){
+
+    .hero-text h1{
+
+        font-size:5.8rem;
+    }
+
+    .memory-popup{
+
+        width:430px;
+    }
+}
+
+@media(max-width:900px){
+
+    body{
+        overflow:auto;
+    }
+
+    .hero-text{
+
+        width:100%;
+
+        left:0;
+
+        padding:100px 40px 0;
+
+        top:auto;
+
+        transform:none;
+    }
+
+    .hero-text h1{
+
+        font-size:4.5rem;
+    }
+
+    .hero-para{
+
+        width:100%;
+    }
+
+    .memory-popup{
+
+        width:85%;
+
+        right:auto;
+
+        left:50%;
+
+        transform:
+        translateX(-50%);
+
+        bottom:120px;
+    }
+
+    .memory-popup.active{
+
+        transform:
+        translateX(-50%)
+        translateY(-10px);
+    }
+
+    .memory-object{
+
+        width:80px;
+        height:80px;
+
+        font-size:2rem;
+    }
+}

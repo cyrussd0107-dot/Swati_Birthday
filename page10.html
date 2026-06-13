@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+    <title>If You Were A Flower</title>
+
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Cormorant+Garamond:wght@400;500;600&display=swap" rel="stylesheet">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="page10.css">
+
+    <!-- GSAP -->
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+</head>
+
+<body class="rose-theme">
+
+    <!-- BACKGROUND -->
+    <div class="bg-layer"></div>
+    <div class="overlay"></div>
+    <div class="grain"></div>
+
+    <!-- FLOATING PARTICLES -->
+    <div class="particles"></div>
+
+    <!-- MAIN -->
+    <main class="flower-page">
+
+        <!-- LEFT -->
+        <section class="left-section">
+
+            <p class="top-tag">emotional garden ✦</p>
+
+            <h1>
+                if<br>
+                you<br>
+                were<br>
+                a<br>
+                flower
+            </h1>
+
+            <p class="description">
+                Some people feel like one flower.
+                You somehow feel like an entire garden.
+            </p>
+
+        </section>
+
+        <!-- CENTER -->
+        <section class="center-section">
+
+            <div class="image-frame">
+
+                <img
+                    id="mainImage"
+                    src="rose.jpg"
+                    alt="Her Photo"
+                >
+
+            </div>
+
+            <div class="quote-box">
+                <p id="quoteText">
+                    “You make love feel soft, safe, and timeless.”
+                </p>
+            </div>
+
+        </section>
+
+        <!-- RIGHT -->
+        <section class="right-section">
+
+            <button
+                class="flower-btn active"
+                data-theme="rose"
+                data-image="pink.jpeg"
+                data-quote="You make love feel soft, safe, and timeless."
+            >
+                🌹 Rose
+            </button>
+
+            <button
+                class="flower-btn"
+                data-theme="lily"
+                data-image="lilly.jpg"
+                data-quote="You bring peace into places without even trying."
+            >
+                🤍 Lily
+            </button>
+
+            <button
+                class="flower-btn"
+                data-theme="cherry"
+                data-image="cherry.jpg"
+                data-quote="You feel like beautiful moments that disappear too quickly."
+            >
+                🌸 Cherry Blossom
+            </button>
+
+            <button
+                class="flower-btn"
+                data-theme="tulip"
+                data-image="tulip"
+                data-quote="You make ordinary days feel quietly special."
+            >
+                🌷 Tulip
+            </button>
+
+            <!-- NEXT -->
+            <a href="page11.html" class="next-btn">
+                continue the garden ✦
+            </a>
+
+        </section>
+
+    </main>
+
+    <!-- JS -->
+    <script src="page10.js"></script>
+
+</body>
+</html>

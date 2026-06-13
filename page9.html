@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Songs That Feel Like You</title>
+
+    <!-- FONTS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Cormorant+Garamond:wght@400;500;600&display=swap" rel="stylesheet">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="page9.css">
+
+    <!-- GSAP -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+
+</head>
+
+<body>
+
+    <!-- BACKGROUND -->
+    <div class="bg-image"></div>
+    <div class="bg-overlay"></div>
+
+    <!-- MAIN -->
+    <main class="music-page">
+
+        <!-- LEFT -->
+        <section class="left-section">
+
+            <p class="mini-tag">
+                soundtrack of you ✦
+            </p>
+
+            <h1 class="main-title">
+                songs<br>
+                that<br>
+                feel<br>
+                like<br>
+                you
+            </h1>
+
+            <p class="description">
+                Some songs don’t just play —
+                they quietly stay inside memories,
+                rainy nights, metro rides,
+                soft conversations
+                and somehow start sounding
+                like you.
+            </p>
+
+        </section>
+
+
+        <!-- CENTER -->
+        <section class="center-section">
+
+            <div class="portrait-wrap">
+
+                <!-- YOUR PHOTO -->
+                <img
+                    src="T3.jpeg"
+                    alt="Her"
+                    class="portrait">
+
+            </div>
+
+        </section>
+
+
+        <!-- RIGHT -->
+        <section class="right-section">
+
+
+            <!-- SONG 1 -->
+            <div class="song-card active-song"
+                 data-audio="udaa.mpeg"
+                 data-lyric="Udaariyan feels like quiet love wrapped inside memories.">
+
+                <div class="cover-wrap">
+                    <img src="Ud.jpg" class="cover">
+                </div>
+
+                <div class="song-info">
+                    <h3>Udaariyan ✨</h3>
+                    <p>soft midnight emotions</p>
+                </div>
+
+                <div class="wave">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+
+                <button class="play-btn">
+                    ▶
+                </button>
+
+            </div>
+
+
+            <!-- SONG 2 -->
+            <div class="song-card"
+                 data-audio="ek.mp3"
+                 data-lyric="Ek din teri raahon mein feels like destiny quietly finding love.">
+
+                <div class="cover-wrap">
+                    <img src="e.jpg" class="cover">
+                </div>
+
+                <div class="song-info">
+                    <h3>Ek Din Teri Raahon Mein 💫</h3>
+                    <p>romantic nostalgia</p>
+                </div>
+
+                <div class="wave">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+
+                <button class="play-btn">
+                    ▶
+                </button>
+
+            </div>
+
+
+          
+
+                
+
+
+            <!-- LYRICS -->
+            <div class="lyrics-box">
+
+                <p id="lyricsText">
+                    Udaariyan feels like quiet love wrapped inside memories.
+                </p>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- NEXT BUTTON -->
+    <a href="page10.html" class="next-page-btn">
+        continue the journey
+        <span>→</span>
+    </a>
+
+
+    <!-- AUDIO -->
+    <audio id="audioPlayer"></audio>
+
+    <!-- JS -->
+    <script src="page9.js"></script>
+
+</body>
+</html>

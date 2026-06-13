@@ -1,0 +1,462 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700;800&display=swap');
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    min-height:100vh;
+    overflow:hidden;
+    font-family:'Poppins',sans-serif;
+    background:#0f0b1d;
+    position:relative;
+    color:white;
+}
+
+/* BACKGROUND */
+
+.gradient-bg{
+    position:absolute;
+    inset:0;
+
+    background:
+    radial-gradient(circle at top left,#ff5ea8 0%,transparent 30%),
+    radial-gradient(circle at bottom right,#8f6bff 0%,transparent 30%),
+    linear-gradient(135deg,#0f0b1d,#17112d,#0b0815);
+
+    z-index:-5;
+}
+
+/* HERO */
+
+.hero{
+    width:100%;
+    min-height:100vh;
+
+    display:flex;
+    align-items:center;
+
+    padding:80px;
+}
+
+/* LEFT CONTENT */
+
+.left-content{
+    width:650px;
+    z-index:10;
+}
+
+/* TOP TEXT */
+
+.top-line{
+    color:#ffb6d9;
+    letter-spacing:4px;
+    margin-bottom:25px;
+    font-size:14px;
+}
+
+/* TITLE */
+
+.main-title{
+    font-size:110px;
+    line-height:0.95;
+    font-weight:800;
+
+    margin-bottom:30px;
+
+    background:
+    linear-gradient(to bottom,#fff,#ffd2e8);
+
+    -webkit-background-clip:text;
+    -webkit-text-fill-color:transparent;
+
+    text-shadow:
+    0 0 25px rgba(255,182,217,0.4);
+
+    animation:floatTitle 4s ease-in-out infinite;
+}
+
+@keyframes floatTitle{
+
+    0%,100%{
+        transform:translateY(0px);
+    }
+
+    50%{
+        transform:translateY(-10px);
+    }
+
+}
+
+/* DESCRIPTION */
+
+.description{
+    color:#e5d9f2;
+    font-size:22px;
+    line-height:1.8;
+
+    margin-bottom:50px;
+
+    max-width:600px;
+}
+
+/* MESSAGE BOX */
+
+.message-box{
+    position:relative;
+
+    height:90px;
+
+    margin-bottom:40px;
+
+    overflow:hidden;
+}
+
+.message{
+    position:absolute;
+
+    width:100%;
+
+    opacity:0;
+
+    transform:
+    translateY(40px);
+
+    transition:1s ease;
+
+    font-size:26px;
+    color:#ffd6eb;
+
+    background:
+    rgba(255,255,255,0.05);
+
+    border:
+    1px solid rgba(255,255,255,0.1);
+
+    padding:20px 25px;
+
+    border-radius:25px;
+
+    backdrop-filter:blur(12px);
+}
+
+.message.active{
+    opacity:1;
+    transform:translateY(0px);
+}
+
+/* BUTTONS */
+
+.magic-btn,
+.continue-btn{
+
+    display:inline-block;
+
+    padding:18px 35px;
+
+    border-radius:50px;
+
+    border:none;
+
+    text-decoration:none;
+
+    font-size:18px;
+    font-weight:600;
+
+    cursor:pointer;
+
+    transition:0.4s ease;
+}
+
+/* MAGIC BUTTON */
+
+.magic-btn{
+
+    background:
+    linear-gradient(135deg,#ff4f9d,#ff84c1);
+
+    color:white;
+
+    margin-right:15px;
+
+    box-shadow:
+    0 0 25px rgba(255,105,180,0.5);
+}
+
+.magic-btn:hover{
+
+    transform:
+    translateY(-5px)
+    scale(1.05);
+
+    box-shadow:
+    0 0 45px rgba(255,105,180,0.8);
+}
+
+/* CONTINUE */
+
+.continue-btn{
+
+    background:
+    rgba(255,255,255,0.08);
+
+    color:white;
+
+    border:
+    1px solid rgba(255,255,255,0.15);
+
+    backdrop-filter:blur(10px);
+}
+
+.continue-btn:hover{
+
+    transform:
+    translateY(-5px);
+
+    background:
+    rgba(255,255,255,0.15);
+}
+
+/* MOON */
+
+.moon{
+    position:absolute;
+
+    right:120px;
+    top:120px;
+
+    width:220px;
+    height:220px;
+
+    border-radius:50%;
+
+    background:
+    radial-gradient(circle,#fff,#ffe8f5);
+
+    box-shadow:
+    0 0 80px rgba(255,255,255,0.7);
+
+    animation:moonFloat 6s ease-in-out infinite;
+}
+
+@keyframes moonFloat{
+
+    0%,100%{
+        transform:translateY(0px);
+    }
+
+    50%{
+        transform:translateY(-20px);
+    }
+
+}
+
+/* STARS */
+
+.stars span{
+
+    position:absolute;
+
+    width:3px;
+    height:3px;
+
+    background:white;
+
+    border-radius:50%;
+
+    animation:twinkle 3s infinite;
+}
+
+@keyframes twinkle{
+
+    0%,100%{
+        opacity:0.2;
+    }
+
+    50%{
+        opacity:1;
+    }
+
+}
+
+/* CLOUDS */
+
+.cloud{
+    position:absolute;
+
+    width:350px;
+    height:120px;
+
+    background:
+    rgba(255,255,255,0.05);
+
+    filter:blur(25px);
+
+    border-radius:100px;
+}
+
+.cloud1{
+    top:150px;
+    left:-100px;
+
+    animation:moveCloud 18s linear infinite;
+}
+
+.cloud2{
+    bottom:100px;
+    right:-100px;
+
+    animation:moveCloud2 22s linear infinite;
+}
+
+@keyframes moveCloud{
+
+    from{
+        transform:translateX(0);
+    }
+
+    to{
+        transform:translateX(250px);
+    }
+
+}
+
+@keyframes moveCloud2{
+
+    from{
+        transform:translateX(0);
+    }
+
+    to{
+        transform:translateX(-250px);
+    }
+
+}
+
+/* MOBILE */
+
+@media(max-width:900px){
+
+    .hero{
+        padding:40px;
+    }
+
+    .main-title{
+        font-size:70px;
+    }
+
+    .description{
+        font-size:18px;
+    }
+
+    .message{
+        font-size:18px;
+    }
+
+    .moon{
+        width:150px;
+        height:150px;
+
+        right:40px;
+        top:40px;
+    }
+
+}
+/* MOON */
+
+.moon{
+    position: absolute;
+    top: 80px;
+    right: 120px;
+
+    width: 240px;
+    height: 240px;
+
+    border-radius: 50%;
+
+    background: #f8f4ff;
+
+    overflow: hidden;
+
+    box-shadow:
+    0 0 60px rgba(255,255,255,0.7),
+    0 0 120px rgba(200,180,255,0.4);
+
+    animation: moonGlow 4s ease-in-out infinite;
+}
+
+
+/* IMAGE INSIDE MOON */
+
+.moon img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+
+    opacity: 0;
+
+    transform: scale(1.15);
+
+    animation:
+    revealFace 4s ease forwards,
+    floatImage 6s ease-in-out infinite;
+}
+
+
+
+/* MOON GLOW */
+
+@keyframes moonGlow{
+
+    0%,100%{
+        box-shadow:
+        0 0 60px rgba(255,255,255,0.7),
+        0 0 120px rgba(200,180,255,0.4);
+    }
+
+    50%{
+        box-shadow:
+        0 0 90px rgba(255,255,255,1),
+        0 0 160px rgba(220,190,255,0.8);
+    }
+}
+
+
+
+/* IMAGE APPEAR EFFECT */
+
+@keyframes revealFace{
+
+    0%{
+        opacity: 0;
+        filter: blur(20px);
+        transform: scale(1.25);
+    }
+
+    40%{
+        opacity: 0.3;
+    }
+
+    100%{
+        opacity: 1;
+        filter: blur(0px);
+        transform: scale(1);
+    }
+}
+
+
+
+/* FLOATING EFFECT */
+
+@keyframes floatImage{
+
+    0%,100%{
+        transform: scale(1) translateY(0px);
+    }
+
+    50%{
+        transform: scale(1.03) translateY(-8px);
+    }
+}
