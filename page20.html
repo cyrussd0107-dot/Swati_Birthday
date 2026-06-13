@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>The Letter</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600&family=Dancing+Script:wght@500;700&display=swap"
+rel="stylesheet">
+
+<link rel="stylesheet" href="page20.css">
+
+</head>
+
+<body>
+
+   <!-- START SCREEN -->
+
+<div class="start-screen">
+
+    <div class="start-card">
+
+        <h2>
+            One Last Thing...
+        </h2>
+
+        <p>
+            Before the surprise,
+            there is something I want you to know.
+        </p>
+
+        <button id="startBtn">
+            Open The Letter
+        </button>
+
+    </div>
+
+</div>
+
+<!-- MUSIC -->
+
+<audio id="letterMusic" loop>
+    <source src="countd.mp3" type="audio/mpeg">
+</audio>
+
+<!-- VIDEO BACKGROUND -->
+
+<div class="video-bg">
+
+    <video
+    autoplay
+    muted
+    loop
+    playsinline>
+
+        <source
+        src="count.mp4"
+        type="video/mp4">
+
+    </video>
+
+    <div class="video-overlay"></div>
+
+</div>
+
+<!-- BLURRED MEMORY PHOTOS -->
+
+
+<!-- DUST -->
+
+<div class="dust"></div>
+
+<!-- SPOTLIGHT -->
+
+<div class="spotlight"></div>
+
+<!-- LETTER SECTION -->
+
+<section class="letter-scene">
+
+    <div class="letter">
+
+    <!-- MEMORY PHOTOS -->
+
+    <div class="letter-memories">
+
+        <img src="ti8.jpeg" class="memory active">
+
+        <img src="ti4.jpeg" class="memory">
+
+        <img src="ti7.jpeg" class="memory">
+
+        <img src="school.jpeg" class="memory">
+
+        <img src="SS.jpeg" class="memory">
+
+        <img src="bg.jpeg" class="memory">
+
+    </div>
+
+    <!-- PAPER OVERLAY -->
+
+    <div class="paper-overlay"></div>
+
+    <div class="paper-fold"></div>
+
+    <!-- LETTER CONTENT -->
+
+    <div class="letter-content">
+
+        <h1 class="salutation">
+            Dear Swatuuu,
+        </h1>
+
+        <div id="typedLetter" class="typed-letter"></div>
+
+        <div class="signature">
+
+            With all my love,
+
+            <span>Cyrus</span>
+
+        </div>
+
+    </div>
+
+</div>
+
+</section>
+
+<!-- FINAL SCENE -->
+
+<section class="final-scene">
+
+    <div class="and-now">
+
+        and now...
+
+    </div>
+
+    <div class="final-reveal">
+
+        <div class="final-title">
+
+            it's finally time.
+
+        </div>
+
+        <div class="birthday-line">
+
+            Happy Birthday, Swatuuu.
+        </div>
+
+    </div>
+
+</section>
+
+<!-- WHITE TRANSITION -->
+
+<div class="white-transition"></div>
+
+<!-- CONTINUE -->
+
+<button class="continue-btn">
+
+    Continue →
+
+</button>
+
+<script src="page20.js"></script>
+
+</body>
+
+</html>

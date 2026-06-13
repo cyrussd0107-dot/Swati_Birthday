@@ -1,0 +1,398 @@
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+body{
+  overflow:hidden;
+  background:#02040a;
+  font-family:'Cormorant Garamond', serif;
+}
+
+/* EXPERIENCE */
+
+.experience{
+  position:relative;
+  width:100%;
+  height:100vh;
+  overflow:hidden;
+  background:#02040a;
+}
+
+/* SPACE */
+
+.space{
+  position:absolute;
+  inset:0;
+
+  background:
+  radial-gradient(circle at center,
+  rgba(10,12,20,.5),
+  #010205 75%);
+}
+
+/* CAMERA */
+
+.camera{
+  position:relative;
+  width:100%;
+  height:100%;
+}
+
+/* NEBULA */
+
+.nebula{
+  position:absolute;
+
+  width:1000px;
+  height:1000px;
+
+  border-radius:50%;
+
+  filter:blur(150px);
+
+  opacity:.10;
+
+  mix-blend-mode:screen;
+}
+
+.nebula1{
+  background:#8b6846;
+
+  top:-300px;
+  left:-200px;
+}
+
+.nebula2{
+  background:#caa06c;
+
+  bottom:-350px;
+  right:-250px;
+}
+
+/* STARS */
+
+.stars{
+  position:absolute;
+  inset:0;
+}
+
+.stars::before{
+  content:"";
+
+  position:absolute;
+
+  width:300%;
+  height:300%;
+
+  top:-100%;
+  left:-100%;
+}
+
+.stars-back::before{
+
+  background-image:
+  radial-gradient(#fff6e8 .7px, transparent .7px);
+
+  background-size:240px 240px;
+
+  opacity:.04;
+}
+
+.stars-mid::before{
+
+  background-image:
+  radial-gradient(#f6e6c5 1px, transparent 1px);
+
+  background-size:150px 150px;
+
+  opacity:.08;
+}
+
+.stars-front::before{
+
+  background-image:
+  radial-gradient(#ffffff 1.3px, transparent 1px);
+
+  background-size:90px 90px;
+
+  opacity:.12;
+}
+
+/* THOUGHT */
+
+.thought{
+  position:absolute;
+
+  top:50%;
+  left:50%;
+
+  transform:translate(-50%,-50%);
+
+  color:rgba(255,240,220,.8);
+
+  font-size:clamp(2rem,4vw,5rem);
+
+  font-weight:300;
+
+  letter-spacing:2px;
+
+  text-align:center;
+
+  opacity:0;
+
+  filter:
+  blur(12px);
+
+  text-shadow:
+  0 0 30px rgba(255,220,180,.08);
+}
+
+/* STAR */
+
+.main-star{
+  position:absolute;
+
+  width:7px;
+  height:7px;
+
+  border-radius:50%;
+
+  background:#fff6e8;
+
+  top:42%;
+  left:62%;
+
+  opacity:0;
+
+  box-shadow:
+  0 0 20px #fff6e8,
+  0 0 60px #fff6e8,
+  0 0 120px #f6e6c5,
+  0 0 220px #d9b98a;
+}
+
+/* STAR LIGHT */
+
+.star-light{
+  position:absolute;
+
+  width:1000px;
+  height:1000px;
+
+  border-radius:50%;
+
+  background:
+  radial-gradient(circle,
+  rgba(255,230,180,.35),
+  transparent 70%);
+
+  top:42%;
+  left:62%;
+
+  transform:
+  translate(-50%,-50%)
+  scale(.1);
+
+  opacity:0;
+}
+
+/* MEMORY */
+
+.memory-scene{
+  position:absolute;
+  inset:0;
+
+  display:flex;
+  justify-content:center;
+  align-items:center;
+
+  opacity:0;
+}
+
+.memory-image{
+
+  width:60vw;
+  max-width:1000px;
+
+  object-fit:cover;
+
+  filter:
+  brightness(.92)
+  contrast(1.06)
+  saturate(.9);
+
+  box-shadow:
+  0 40px 120px rgba(0,0,0,.9);
+
+  transform:
+  scale(.75);
+}
+
+/* MEMORY FOG */
+
+.memory-fog{
+  position:absolute;
+
+  width:1300px;
+  height:1300px;
+
+  border-radius:50%;
+
+  background:
+  radial-gradient(circle,
+  rgba(255,220,180,.16),
+  transparent 70%);
+
+  filter:blur(100px);
+
+  mix-blend-mode:screen;
+}
+
+/* VIDEO */
+
+.video-scene{
+  position:absolute;
+  inset:0;
+
+  opacity:0;
+}
+
+.video-scene::after{
+  content:"";
+
+  position:absolute;
+  inset:0;
+
+  background:
+  radial-gradient(circle,
+  transparent 45%,
+  rgba(0,0,0,.75));
+
+  pointer-events:none;
+}
+
+video{
+  width:100%;
+  height:100%;
+
+  object-fit:cover;
+
+  filter:
+  brightness(.88)
+  contrast(1.08)
+  saturate(.9);
+
+  transform:scale(1.02);
+}
+
+/* LETTER */
+
+.letter-scene{
+  position:absolute;
+  inset:0;
+
+  background:#f4eee3;
+
+  display:flex;
+  justify-content:center;
+  align-items:center;
+
+  opacity:0;
+}
+
+.paper-overlay{
+  position:absolute;
+
+  inset:0;
+
+  background:
+  radial-gradient(circle,
+  rgba(255,255,255,.4),
+  transparent 70%);
+}
+
+.letter-text{
+  position:relative;
+
+  width:80%;
+
+  text-align:center;
+
+  color:#1b1b1b;
+
+  font-size:clamp(2rem,4vw,5rem);
+
+  line-height:1.5;
+
+  font-style:italic;
+
+  opacity:0;
+}
+
+/* VIGNETTE */
+
+.vignette{
+  position:absolute;
+  inset:0;
+
+  background:
+  radial-gradient(circle,
+  transparent 38%,
+  rgba(0,0,0,.82));
+
+  pointer-events:none;
+
+  z-index:100;
+}
+
+/* GRAIN */
+
+.grain{
+  position:absolute;
+  inset:-200%;
+
+  background-image:
+  url("https://grainy-gradients.vercel.app/noise.svg");
+
+  opacity:.05;
+
+  animation:grain 8s steps(10) infinite;
+
+  pointer-events:none;
+
+  z-index:101;
+}
+
+@keyframes grain{
+
+  0%{
+    transform:translate(0,0);
+  }
+
+  25%{
+    transform:translate(-5%,-10%);
+  }
+
+  50%{
+    transform:translate(10%,5%);
+  }
+
+  75%{
+    transform:translate(-15%,10%);
+  }
+
+  100%{
+    transform:translate(0,0);
+  }
+
+}
+
+@media(max-width:768px){
+
+  .memory-image{
+    width:90vw;
+  }
+
+}

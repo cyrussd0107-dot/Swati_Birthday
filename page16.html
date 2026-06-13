@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Timeline Of Us</title>
+
+<link rel="stylesheet" href="page16.css">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&family=Cormorant+Garamond:wght@400;600;700&display=swap"
+rel="stylesheet">
+
+</head>
+
+<body>
+
+<!-- VIDEO -->
+
+<video 
+class="bg-video"
+autoplay
+muted
+loop
+playsinline
+webkit-playsinline>
+
+    <source src="timelinee.mp4" type="video/mp4">
+
+</video>
+
+<div class="overlay"></div>
+
+<!-- MUSIC -->
+
+<audio id="bgMusic" loop>
+    <source src="tsong.mp3" type="audio/mp3">
+</audio>
+
+<button id="musicBtn" class="music-btn">
+    ♫ play music
+</button>
+
+<!-- TEXT SCREEN -->
+
+<section class="text-screen" id="textScreen">
+
+    <div class="scene-number" id="sceneNumber"></div>
+
+    <div class="date" id="date"></div>
+
+    <h1 class="title" id="title"></h1>
+
+    <div class="text" id="text"></div>
+
+</section>
+
+<!-- IMAGE SCREEN -->
+
+<section class="image-screen" id="imageScreen">
+
+    <div class="image-box">
+
+        <img id="sceneImage">
+
+    </div>
+
+    <button id="nextBtn" class="next-btn">
+        continue story →
+    </button>
+
+</section>
+
+<script src="page16.js"></script>
+
+</body>
+</html>
